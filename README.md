@@ -1,4 +1,4 @@
-# Trabalho - Análise do Algoritmo "RecomendaFácil"
+# Trabalho - Análise de Artigos"
 
 <p align="center">
   <img src="assets/logo-vassouras.png" alt="Universidade de Vassouras" width="400"/>
