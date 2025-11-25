@@ -1,78 +1,110 @@
-# Trabalho - Análise de Artigos"
+# Análise Bibliométrica: Engenharia de Software Contínua & Experimental
 
 <p align="center">
-  <img src="assets/logo-vassouras.png" alt="Universidade de Vassouras" width="400"/>
+  <img src="assets/logo-vassouras.png" alt="Universidade de Vassouras" width="250"/>
 </p>
 
-<h3 align="center">
-  Universidade de Vassouras  
-</h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python">
+  <img src="https://img.shields.io/badge/Data%20Analysis-Pandas%20%7C%20Seaborn-orange.svg" alt="Data Science">
+  <img src="https://img.shields.io/badge/Status-Concluído-green.svg" alt="Status">
+</p>
 
 ---
 
-### 📚 Curso: **Engenharia de Software**  
-### 🖥️ Disciplina: **Engenharia de Software Contínua e Experimental**  
-### 👨‍🎓 Autor: **Matheus Beiruth**
+## 🎯 Visão Geral
+
+Este projeto consiste em uma análise técnica e bibliométrica sobre a interseção entre práticas modernas de **DevOps (Engenharia de Software Contínua)** e métodos de validação científica **(Engenharia de Software Experimental)**.
+
+Através da análise de **17 artigos-chave publicados entre 2015 e 2022**, o projeto busca responder: *Como a indústria está validando empiricamente a aceleração dos ciclos de desenvolvimento?*
+
+O repositório contém:
+1. **Análise Teórica:** Síntese dos conceitos de CI/CD, Experimentos Controlados e DevSecOps.
+2. **Pipeline de Dados:** Scripts em Python para processamento dos metadados dos artigos.
+3. **Visualização de Dados:** Gráficos gerados automaticamente que revelam tendências da indústria.
 
 ---
 
+## 📊 Insights dos Dados
 
+Os gráficos abaixo foram gerados programaticamente pelo script `src/analysis.py` a partir do dataset consolidado.
 
+### 1. Aceleração da Produção Científica
+Nota-se um aumento consistente no interesse pelo tema, correlacionado com a adoção massiva de Kubernetes e microsserviços na indústria a partir de 2018.
 
+![Evolução Anual](assets/grafico_01_evolucao_anual.png)
 
-# Engenharia de Software Contínua & Experimental
+### 2. Metodologias Predominantes
+A análise revelou que a área ainda é dominada por **Estudos de Caso**. Isso indica que a Engenharia de Software Contínua ainda é fortemente dependente do contexto específico de cada empresa, dificultando a criação de "leis gerais" (validade externa), mas fornecendo insights práticos valiosos.
 
-Este repositório contém um estudo sobre a **interseção entre práticas modernas de desenvolvimento de software (CI/CD, DevOps)** e a **avaliação empírica através da Engenharia de Software Experimental (ESE)**.
+![Metodologias](assets/grafico_02_metodologia.png)
 
----
+### 3. O que está sendo medido?
+As empresas não buscam apenas "velocidade". Os dados mostram que **Qualidade e Desempenho** são tão vitais quanto a produtividade, refutando a ideia de que DevOps sacrifica qualidade por rapidez.
 
-## 🎯 Objetivo
-O trabalho busca analisar **como a Engenharia de Software Contínua (ESC)** acelera o ciclo de desenvolvimento e entrega de valor, e como a **Engenharia de Software Experimental (ESE)** fornece rigor científico para validar a eficácia dessas práticas no contexto real da indústria.
-
----
-
-## 📌 Conteúdo do Documento
-O documento em Word apresenta:
-
-- **Engenharia de Software Contínua (ESC)**  
-  Introdução às práticas de **Integração Contínua (CI)**, **Entrega Contínua (CD)** e **Implantação Contínua (CD)**, destacando seus benefícios e desafios.
-
-- **Engenharia de Software Experimental (ESE)**  
-  Explicação sobre o uso de **estudos de caso, surveys e experimentos controlados** para avaliar práticas de software com base em evidências.
-
-- **Sinergia entre ESC e ESE**  
-  Como os ambientes automatizados de DevOps funcionam como **laboratórios vivos**, possibilitando análises e validações empíricas em tempo real.
-
-- **Estado da Arte na Pesquisa**  
-  Panorama da literatura acadêmica entre **2015 e 2022**, destacando metodologias, métricas usadas e principais limitações.
-
-- **Conexão com a Indústria**  
-  Alinhamento das pesquisas com problemas reais enfrentados pelas empresas:  
-  - Resistência à mudança  
-  - Complexidade de ferramentas  
-  - Requisitos não-funcionais (RNFs)  
-  - Cultura organizacional
-
-- **Limitações e Críticas**  
-  Discussão sobre validade externa, interna e de construto, além dos desafios de generalização e viés de publicação.
-
-- **Síntese dos Achados**  
-  - Estudos de caso dominam a pesquisa.  
-  - Foco em produtividade, qualidade e desempenho.  
-  - Desafios técnicos e, principalmente, culturais/organizacionais.  
-  - Forte alinhamento com tendências como **microsserviços, IaC e Big Data**.
-
-- **Contribuições**  
-  Benefícios esperados para **praticantes**, **pesquisadores** e **educação**.
-
-- **Sugestões para Pesquisas Futuras**  
-  Necessidade de **experimentos controlados**, investigação de **DevSecOps**, foco em **fatores humanos** e **estudos longitudinais**.
+![Métricas](assets/grafico_03_metricas.png)
 
 ---
 
-## ✅ Conclusão
-A combinação da **velocidade da Engenharia de Software Contínua** com o **rigor científico da Engenharia de Software Experimental** é essencial para aproximar **academia e indústria**, garantindo soluções mais eficazes, escaláveis e baseadas em evidências.
+## 📚 Fundamentação Teórica
+
+A análise dos artigos permitiu identificar três pilares na relação entre Indústria e Academia:
+
+1. **O Paradigma da Engenharia Contínua (ESC)**
+   - Práticas de *Continuous Integration* (CI) e *Continuous Delivery* (CD) transformaram o desenvolvimento em um fluxo constante de valor.
+   - **Desafio encontrado:** Resistência cultural e complexidade na gestão de configurações.
+
+2. **O Papel da Engenharia Experimental (ESE)**
+   - Uso de métodos rigorosos (experimentos controlados, surveys) para validar se uma nova ferramenta (ex: Docker) realmente traz ganho de performance.
+   - **Laboratórios Vivos:** Ambientes de DevOps instrumentados servem como fonte rica de dados para análise em tempo real.
+
+3. **Lacunas de Pesquisa**
+   - Falta de estudos longitudinais (longo prazo).
+   - Necessidade de maior foco em **DevSecOps** e fatores humanos na automação.
 
 ---
 
-📄 O documento completo está disponível em formato **Word** neste repositório.
+## 🛠️ Estrutura do Projeto
+
+```bash
+/
+├── assets/                # Gráficos gerados e imagens
+├── data/                  # Dataset bibliométrico (CSV)
+├── papers/                # Artigos originais analisados (PDF)
+├── src/                   # Código fonte de análise
+│   └── analysis.py        # Script de processamento e visualização
+├── requirements.txt       # Dependências do projeto
+└── README.md              # Documentação principal
+```
+
+## 🚀 Como Executar
+Para reproduzir as análises e gerar os gráficos em sua máquina:
+
+Clone o repositório:
+
+```bash
+
+git clone [https://github.com/beiruthdev/p1-engenharia-de-software-cont-nua-e-experimental.git](https://github.com/beiruthdev/p1-engenharia-de-software-cont-nua-e-experimental.git)
+cd p1-engenharia-de-software-cont-nua-e-experimental
+```
+
+Instale as dependências:
+
+```bash
+
+pip install -r requirements.txt
+```
+
+Execute o script de análise:
+```bash
+
+
+cd src
+python analysis.py
+```
+Os arquivos PNG serão atualizados na pasta assets.
+
+👨‍🎓 Autor
+Matheus Beiruth Engenharia de Software @ Universidade de Vassouras
+
+Este projeto foi desenvolvido como parte da avaliação da disciplina de Engenharia de Software Contínua e Experimental.
