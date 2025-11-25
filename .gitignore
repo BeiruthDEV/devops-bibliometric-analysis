@@ -1,0 +1,30 @@
+# --- Ambientes Virtuais (Virtual Envs) ---
+# Ignora pastas comuns de ambientes virtuais
+venv/
+env/
+.venv/
+.env/
+
+# --- Python ---
+# Ignora arquivos compilados/cache (não devem ir para o repo)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Distribuição / Builds ---
+dist/
+build/
+*.egg-info/
+
+# --- IDEs e Sistema Operacional ---
+# Arquivos de configuração local do editor (VS Code, PyCharm, etc)
+.vscode/
+.idea/
+# Arquivos de sistema (Mac/Windows)
+.DS_Store
+Thumbs.db
+
+# --- Dados ---
+# Ignora a pasta de dados brutos se forem muito grandes ou sensíveis
+# (Opcional: mantenha se quiser que o CSV de exemplo suba)
+# data/
